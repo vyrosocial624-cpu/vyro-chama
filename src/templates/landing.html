@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7fc">
+    <meta
+      name="description"
+      content="Vyro Self Help Group helps members save together and access loans under the group's agreed rules."
+    >
+    <title>Vyro Self Help Group | Save together, grow together</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Vyro Self Help Group home">
+        <img class="brand-logo" src="assets/vyro-chama-logo.png" alt="Vyro Chama — Save Together. Achieve More." width="662" height="320">
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="visually-hidden">Open navigation</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <button class="nav-close" type="button" aria-label="Close navigation">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#savings-and-loans">Savings</a>
+        <a href="loan-rules.html">Loan rules</a>
+        <details class="nav-portals">
+          <summary>Portals</summary>
+          <div class="nav-portals-menu">
+            <button class="portal-trigger" type="button" data-portal-open>Member portal</button>
+            <a href="admin/">Admin portal</a>
+          </div>
+        </details>
+        <button class="nav-request-join" type="button" data-portal-open="signup">Request to join</button>
+      </nav>
+    </header>
+    <button class="nav-backdrop" type="button" aria-label="Close navigation" tabindex="-1"></button>
+
+    <main id="main">
+      <section class="hero section-wrap" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Save together. Grow together.</p>
+          <h1>Small savings can open up <em>new possibilities.</em></h1>
+          <p class="hero-intro">
+            Vyro Self Help Group brings members together to save regularly and access
+            loans through the group, guided by shared rules and available funds.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#savings-and-loans">Explore savings &amp; loans <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#how-it-works">See how it works</a>
+          </div>
+          <div class="hero-note">
+            <span class="note-icon" aria-hidden="true">✳</span>
+            <p>Shared savings. Member access to loans. Progress together.</p>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of group members working together" role="img">
+          <div class="art-sun"></div>
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-figure figure-one"><span class="figure-head"></span><span class="figure-body"></span></div>
+          <div class="art-figure figure-two"><span class="figure-head"></span><span class="figure-body"></span></div>
+          <div class="art-figure figure-three"><span class="figure-head"></span><span class="figure-body"></span></div>
+          <div class="art-plant plant-one"><i></i><i></i><i></i><b></b></div>
+          <div class="art-plant plant-two"><i></i><i></i><i></i><b></b></div>
+          <div class="art-caption"><span aria-hidden="true">✦</span> Growing together</div>
+        </div>
+        <div class="hero-bottom">
+          <span>Save</span><span class="bottom-line"></span><span>Borrow</span><span class="bottom-line"></span><span>Repay</span>
+        </div>
+      </section>
+
+      <section class="intro section-wrap" id="about">
+        <div class="section-label"><span>01</span> About the group</div>
+        <div class="intro-content">
+          <h2>A shared habit.<br><em>A stronger future.</em></h2>
+          <div class="intro-text">
+            <p>
+              Vyro is a member-led self help group built around saving together. Members
+              contribute savings according to the group's agreed process, creating a shared
+              fund that can support loans to members.
+            </p>
+            <p>
+              The group sets its own contribution, loan, and repayment rules. Members
+              should understand and agree to the terms before saving or borrowing.
+            </p>
+          </div>
+        </div>
+        <div class="values-row">
+          <article class="value-card">
+            <span class="value-number">01</span>
+            <h3>Save consistently</h3>
+            <p>Members build a shared savings habit by contributing as agreed.</p>
+          </article>
+          <article class="value-card">
+            <span class="value-number">02</span>
+            <h3>Access group loans</h3>
+            <p>Members may request loans subject to group rules and available funds.</p>
+          </article>
+          <article class="value-card">
+            <span class="value-number">03</span>
+            <h3>Keep clear records</h3>
+            <p>Transparent records help members track savings, loans, and repayments.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="expect section-wrap" id="savings-and-loans">
+        <div class="section-label"><span>02</span> Savings &amp; loans</div>
+        <div class="expect-grid">
+          <div>
+            <p class="eyebrow">Member-powered progress</p>
+            <h2>Save as a group.<br>Borrow by <em>the rules.</em></h2>
+            <p class="expect-intro">
+              Members' savings help build the group's lending pool. Loan approval,
+              amounts, costs, and repayment schedules depend on Vyro's agreed policy
+              and the funds available.
+            </p>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <span class="step-icon" aria-hidden="true">01</span>
+              <div><h3>Agree on the rules</h3><p>Understand contribution amounts, how records are kept, and the group's loan and repayment terms.</p></div>
+            </article>
+            <article class="step">
+              <span class="step-icon" aria-hidden="true">02</span>
+              <div><h3>Build your savings</h3><p>Contribute according to the schedule and process agreed by Vyro members.</p></div>
+            </article>
+            <article class="step">
+              <span class="step-icon" aria-hidden="true">03</span>
+              <div><h3>Apply and repay responsibly</h3><p>Eligible members can request a loan under group policy, then repay on the agreed schedule.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="public-rules section-wrap" id="group-rules">
+        <div class="section-label"><span>03</span> Loan rules</div>
+        <div class="public-rules-heading">
+          <div><p class="eyebrow">Know the requirements</p><h2>Borrow with<br><em>clear expectations.</em></h2></div>
+          <p>These are the current portal eligibility checks. A request still needs guarantor consent, administrator review, and available group funds.</p>
+        </div>
+        <div class="public-rules-grid">
+          <article><span>01</span><h3>Membership</h3><p>Be an active member for at least three months.</p></article>
+          <article><span>02</span><h3>Savings-based limit</h3><p>The maximum request is the lower of three times your recorded positive net savings or the limit set by the group administrator.</p></article>
+          <article><span>03</span><h3>Meeting attendance</h3><p>Attend at least 75% of recorded group meetings during your membership.</p></article>
+          <article><span>04</span><h3>Two guarantors</h3><p>Select two different approved group members. Both must accept before the request goes to the administrator.</p></article>
+          <article><span>05</span><h3>Existing loans</h3><p>Repay your current loan before another request can be considered. One active loan at a time.</p></article>
+          <article><span>06</span><h3>Approval and repayment</h3><p>Eligibility does not guarantee approval. Agree to the written amount, repayment schedule, and disclosed charges before accepting a loan.</p></article>
+        </div>
+        <p class="public-rules-note">The group administrator confirms the current written rules, available funds, costs, and any late-payment process before a loan is accepted. No interest rate or late fee is stated here.</p>
+        <a class="rules-page-link" href="loan-rules.html">Read the complete loan rules <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section class="quote-band">
+        <div class="quote-inner">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <blockquote>When we save together, we create more possibilities together.</blockquote>
+          <p>Shared commitment. Clear agreements. Collective progress.</p>
+        </div>
+        <span class="quote-decoration decoration-left" aria-hidden="true">✳</span>
+        <span class="quote-decoration decoration-right" aria-hidden="true">✳</span>
+      </section>
+
+      <section class="resources section-wrap" id="how-it-works">
+        <div class="section-label"><span>04</span> Borrow with clarity</div>
+        <div class="resources-heading">
+          <div><p class="eyebrow">Know before you borrow</p><h2>Clear terms build<br><em>trust.</em></h2></div>
+          <p>Before taking a loan, make sure you know what you will receive, what you must repay, when repayments are due, and what happens if you cannot pay on time.</p>
+        </div>
+        <div class="reminders">
+          <article><span aria-hidden="true">↗</span><h3>Ask about the full cost</h3><p>Confirm any interest, fees, or other charges before agreeing to a loan.</p></article>
+          <article><span aria-hidden="true">♡</span><h3>Borrow within your means</h3><p>Consider your budget and whether the repayment schedule is manageable.</p></article>
+          <article><span aria-hidden="true">✳</span><h3>Keep your own records</h3><p>Keep copies of your savings, loan agreement, repayments, and group statements.</p></article>
+        </div>
+      </section>
+
+      <section class="connect section-wrap" id="connect">
+        <div class="connect-card">
+          <div class="connect-copy">
+            <p class="eyebrow">Ready to learn more?</p>
+            <h2>Build your savings<br><em>with Vyro.</em></h2>
+            <p>To get started, submit a member access request through the portal. A group administrator will review it and follow up.</p>
+            <button class="button button-light connect-portal-trigger" type="button" data-portal-open>Request to join <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="connect-art" aria-hidden="true">
+            <div class="connect-circle circle-back"></div>
+            <div class="connect-circle circle-front"><span>together<br>is a good<br>place to start.</span></div>
+            <span class="connect-spark spark-one">✳</span><span class="connect-spark spark-two">✦</span>
+          </div>
+        </div>
+        <div class="contact-details" id="contact-details">
+          <span class="contact-icon" aria-hidden="true">✉</span>
+          <div>
+            <h3>Contact Vyro</h3>
+            <p class="contact-items">
+              <a href="mailto:admin@vyrosocial.com">admin@vyrosocial.com</a>
+              <a href="tel:+254112800325">+254-112-800-325</a>
+              <span>Kasarani Area</span>
+            </p>
+            <p class="joining-note">To join, submit a member access request in the <button type="button" class="inline-portal-trigger" data-portal-open>member portal</button>. The administrator will review your request.</p>
+          </div>
+        </div>
+        <p class="disclaimer">
+          Savings and loan terms are set by Vyro Self Help Group. Confirm the current written rules, eligibility,
+          costs, and repayment obligations directly with the group before contributing or borrowing.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-about">
+          <a class="brand footer-brand" href="#home" aria-label="Vyro Self Help Group, back to top">
+            <img class="brand-logo" src="assets/vyro-chama-logo.png" alt="Vyro Chama — Save Together. Achieve More." width="662" height="320">
+          </a>
+          <p>A member-led group building a shared savings habit and supporting one another through clear, agreed rules.</p>
+          <span class="footer-motto">Save together. Grow together.</span>
+        </div>
+        <nav class="footer-quick-links" aria-label="Explore Vyro">
+          <h2>Explore</h2>
+          <a href="#home">Home</a>
+          <a href="#about">About the group</a>
+          <a href="#savings-and-loans">Savings &amp; loans</a>
+          <a href="loan-rules.html">Loan rules</a>
+          <a href="#how-it-works">Borrow with clarity</a>
+        </nav>
+        <nav class="footer-app-portals" aria-label="App portals">
+          <h2>App portals</h2>
+          <a class="footer-portal-trigger" href="admin/">Admin portal <span aria-hidden="true">→</span></a>
+          <button class="footer-portal-trigger" type="button" data-portal-open>Member portal <span aria-hidden="true">→</span></button>
+        </nav>
+        <div class="footer-contact">
+          <h2>Contact</h2>
+          <a href="mailto:admin@vyrosocial.com">admin@vyrosocial.com</a>
+          <a href="tel:+254112800325">+254-112-800-325</a>
+          <p>Kasarani Area</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="copyright">© <span id="year"></span> Vyro Self Help Group</span>
+        <p>Savings and loans follow the group’s current agreed rules.</p>
+        <div class="footer-bottom-links"><a href="privacy.html">Privacy notice</a><a href="loan-rules.html">Loan rules</a><a href="#home" class="back-to-top">Back to top <span aria-hidden="true">↑</span></a></div>
+      </div>
+    </footer>
+
+    <dialog class="portal-dialog" id="member-portal" aria-labelledby="portal-title">
+      <div class="portal-modal">
+        <button class="modal-close" type="button" aria-label="Close member portal">&times;</button>
+        <p class="eyebrow">Vyro member portal</p>
+        <h2 id="portal-title">Welcome back</h2>
+        <p class="portal-intro">Sign in to your account or request to join the member portal.</p>
+
+        <div class="portal-tabs" role="tablist" aria-label="Member portal access">
+          <button class="portal-tab is-active" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-panel" data-portal-tab="login">Log in</button>
+          <button class="portal-tab" id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-panel" data-portal-tab="signup" tabindex="-1">Sign up</button>
+        </div>
+
+        <form class="portal-form" id="login-panel" role="tabpanel" aria-labelledby="login-tab" data-portal-form="login">
+          <label for="login-email">Email address</label>
+          <input id="login-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <label for="login-password">Password</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Your password" required>
+          <button class="portal-submit" type="submit">Continue to email verification <span aria-hidden="true">→</span></button>
+          <button class="dashboard-text-button password-reset-trigger" type="button" data-password-reset>Forgot password?</button>
+        </form>
+
+        <form class="portal-form" id="login-verification-form" hidden>
+          <label for="login-verification-email">Email address</label>
+          <input id="login-verification-email" name="email" type="email" autocomplete="email" readonly required>
+          <label for="login-verification-code">Email sign-in code</label>
+          <input id="login-verification-code" name="token" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,8}" minlength="6" maxlength="8" placeholder="Enter the code from your email" aria-describedby="login-verification-help" required>
+          <p id="login-verification-help" class="verification-help">Enter the six- or eight-digit code from your email to finish signing in.</p>
+          <button class="portal-submit" type="submit">Verify and sign in <span aria-hidden="true">→</span></button>
+          <button class="dashboard-text-button" type="button" id="resend-login-code">Resend code</button>
+        </form>
+
+        <form class="portal-form" id="signup-panel" role="tabpanel" aria-labelledby="signup-tab" data-portal-form="signup" hidden>
+          <label for="signup-name">Full name</label>
+          <input id="signup-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
+          <label for="signup-email">Email address</label>
+          <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <label for="signup-phone">Phone number</label>
+          <input id="signup-phone" name="phone" type="tel" autocomplete="tel" placeholder="+254 7XX XXX XXX" required>
+          <label for="signup-password">Create a password</label>
+          <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required>
+          <label class="privacy-consent" for="signup-privacy-consent">
+            <input id="signup-privacy-consent" name="privacy_notice_version" type="checkbox" value="2026-11-17" required>
+            <span>I have read and acknowledge the <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Notice</a>.</span>
+          </label>
+          <button class="portal-submit" type="submit">Request member access <span aria-hidden="true">→</span></button>
+        </form>
+        <form class="portal-form" id="signup-verification-form" hidden>
+          <label for="signup-verification-email">Email address</label>
+          <input id="signup-verification-email" name="email" type="email" autocomplete="email" readonly required>
+          <label for="signup-verification-code">Email verification code</label>
+          <input id="signup-verification-code" name="token" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,8}" minlength="6" maxlength="8" placeholder="Enter the code from your email" aria-describedby="signup-verification-help" required>
+          <p id="signup-verification-help" class="verification-help">Enter the six- or eight-digit code from Supabase Auth’s confirmation email.</p>
+          <button class="portal-submit" type="submit">Verify email <span aria-hidden="true">→</span></button>
+          <button class="dashboard-text-button" type="button" id="resend-signup-code">Resend code</button>
+        </form>
+        <form class="portal-form" id="recovery-verification-form" hidden>
+          <label for="recovery-verification-email">Email address</label>
+          <input id="recovery-verification-email" name="email" type="email" autocomplete="email" readonly required>
+          <label for="recovery-verification-code">Password reset code</label>
+          <input id="recovery-verification-code" name="token" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,8}" minlength="6" maxlength="8" placeholder="Enter the code from your email" aria-describedby="recovery-verification-help" required>
+          <p id="recovery-verification-help" class="verification-help">Enter the six- or eight-digit password reset code from Supabase Auth’s email.</p>
+          <button class="portal-submit" type="submit">Verify reset code <span aria-hidden="true">→</span></button>
+          <button class="dashboard-text-button" type="button" id="resend-recovery-code">Resend code</button>
+        </form>
+        <form class="portal-form password-recovery-form" id="password-recovery-form" hidden>
+          <label for="recovery-password">New password</label>
+          <input id="recovery-password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required>
+          <button class="portal-submit" type="submit">Update password</button>
+        </form>
+        <div class="portal-account" hidden>
+          <div class="dashboard-header">
+            <div class="dashboard-brand">
+              <img class="dashboard-logo" src="assets/vyro-chama-logo.png" alt="Vyro Chama — Save Together. Achieve More." width="662" height="320">
+              <div class="dashboard-brand-copy">
+                <p class="dashboard-kicker">Member dashboard</p>
+                <h3 class="dashboard-group-name">Vyro Self Help Group</h3>
+              </div>
+            </div>
+            <div class="dashboard-user">
+              <div class="dashboard-user-copy">
+                <strong class="portal-account-name"></strong>
+                <span class="portal-account-email"></span>
+                <span class="dashboard-member-since"></span>
+              </div>
+              <button class="portal-signout" type="button">Sign out</button>
+            </div>
+          </div>
+
+          <nav class="dashboard-nav" aria-label="Member dashboard">
+            <button type="button" class="is-active" data-dashboard-view="overview" aria-pressed="true">Overview</button>
+            <button type="button" data-dashboard-view="members" aria-pressed="false">Members</button>
+            <button type="button" data-dashboard-view="savings" aria-pressed="false">Savings</button>
+            <button type="button" data-dashboard-view="loans" aria-pressed="false">Loans</button>
+            <button type="button" data-dashboard-view="updates" aria-pressed="false">Updates</button>
+          </nav>
+
+          <p class="dashboard-message" role="status" aria-live="polite">Loading your group dashboard…</p>
+
+          <section class="dashboard-view is-active" data-dashboard-panel="overview">
+            <div class="dashboard-welcome">
+              <div>
+                <p class="dashboard-kicker">Group overview</p>
+                <h3>Welcome, <span class="dashboard-welcome-name"></span></h3>
+                <p>Here’s the latest view of your group and account.</p>
+              </div>
+              <span class="membership-badge">Approved member</span>
+            </div>
+            <div class="dashboard-metrics">
+              <article class="dashboard-metric"><span>Group members</span><strong data-metric="members">—</strong><small>Approved members</small></article>
+              <article class="dashboard-metric"><span>Group savings</span><strong data-metric="group-savings">—</strong><small>Net recorded savings</small></article>
+              <article class="dashboard-metric"><span>Active group loans</span><strong data-metric="group-loans">—</strong><small data-metric="group-loan-balance">Outstanding balance —</small></article>
+              <article class="dashboard-metric"><span>Available lending funds</span><strong data-metric="available-funds">—</strong><small>Recorded group savings less active loan balances</small></article>
+              <article class="dashboard-metric metric-personal"><span>My savings</span><strong data-metric="my-savings">—</strong><small>Your recorded net savings</small></article>
+              <article class="dashboard-metric metric-personal"><span>My loan balance</span><strong data-metric="my-loans">—</strong><small>Outstanding on your active loans</small></article>
+            </div>
+            <section class="dashboard-meeting">
+              <span class="meeting-icon" aria-hidden="true">✦</span>
+              <div><p class="dashboard-kicker">Stay connected</p><h3>Next group meeting</h3></div>
+              <strong class="dashboard-meeting-date">No meeting scheduled</strong>
+              <span class="dashboard-meeting-location"></span>
+            </section>
+            <div class="dashboard-columns">
+              <section class="dashboard-card">
+                <div class="dashboard-section-heading"><div><p class="dashboard-kicker">Your account</p><h3>Recent activity</h3></div><button type="button" class="dashboard-text-button" data-dashboard-link="savings">Savings details</button></div>
+                <ul class="dashboard-list" data-dashboard-list="recent-activity"></ul>
+              </section>
+              <section class="dashboard-card">
+                <div class="dashboard-section-heading"><div><p class="dashboard-kicker">From your group</p><h3>Latest updates</h3></div><button type="button" class="dashboard-text-button" data-dashboard-link="updates">All updates</button></div>
+                <ul class="dashboard-list" data-dashboard-list="recent-updates"></ul>
+              </section>
+            </div>
+            <section class="dashboard-card account-settings" aria-labelledby="account-settings-title">
+              <div class="dashboard-page-heading"><p class="dashboard-kicker">Account &amp; privacy</p><h3 id="account-settings-title">Your contact details</h3><p>Update your name or phone number. Contact the group administrator to correct financial records or membership information that cannot be edited here.</p></div>
+              <form class="account-profile-form" id="account-profile-form">
+                <label for="profile-full-name">Full name</label>
+                <input id="profile-full-name" name="full_name" type="text" minlength="2" maxlength="120" required>
+                <label for="profile-phone">Phone number</label>
+                <input id="profile-phone" name="phone" type="tel" minlength="7" maxlength="32" required>
+                <button class="portal-submit" type="submit">Save contact details</button>
+                <button class="dashboard-text-button" type="button" data-password-reset>Send password reset email</button>
+                <p class="account-profile-message" role="status" aria-live="polite"></p>
+              </form>
+            </section>
+          </section>
+
+          <section class="dashboard-view" data-dashboard-panel="members" hidden>
+            <div class="dashboard-page-heading"><p class="dashboard-kicker">Your community</p><h3>Group members</h3><p>Approved members of <span class="inline-group-name">Vyro Self Help Group</span>.</p></div>
+            <div class="dashboard-card table-card">
+              <div class="member-table" role="table" aria-label="Approved group members">
+                <div class="member-table-row member-table-head" role="row"><span role="columnheader">Member</span><span role="columnheader">Member since</span><span role="columnheader">Status</span></div>
+                <div data-dashboard-list="members"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="dashboard-view" data-dashboard-panel="savings" hidden>
+            <div class="dashboard-page-heading"><p class="dashboard-kicker">Your contributions</p><h3>My savings</h3><p>Your recorded deposits and withdrawals.</p></div>
+            <div class="dashboard-metrics dashboard-metrics-single">
+              <article class="dashboard-metric"><span>Net savings balance</span><strong data-metric="my-savings-page">—</strong><small>Based on your posted records</small></article>
+              <article class="dashboard-metric"><span>Contributions</span><strong data-metric="contribution-count">—</strong><small>Recorded deposits</small></article>
+            </div>
+            <section class="member-payment-card dashboard-card" aria-labelledby="member-payment-title">
+              <div class="dashboard-section-heading">
+                <div><p class="dashboard-kicker">Secure payment</p><h3 id="member-payment-title">Pay with M-Pesa</h3></div>
+                <span class="member-payment-badge">Paybill</span>
+              </div>
+              <p class="member-payment-intro">Choose where your payment should go. STK payments are matched automatically; manual M-Pesa references need administrator review.</p>
+              <form class="member-payment-form" id="member-payment-form">
+                <div class="member-payment-fields">
+                  <div class="member-payment-field">
+                    <label for="member-payment-type">Payment type</label>
+                    <select id="member-payment-type" name="payment_type" required>
+                      <option value="savings">Savings contribution</option>
+                      <option value="loan_repayment">Loan repayment</option>
+                    </select>
+                  </div>
+                  <div class="member-payment-field" data-payment-loan-field hidden>
+                    <label for="member-payment-loan">Loan to repay</label>
+                    <select id="member-payment-loan" name="loan_id"></select>
+                  </div>
+                  <div class="member-payment-field">
+                    <label for="member-payment-amount">Amount (KES)</label>
+                    <input id="member-payment-amount" name="amount" type="number" min="1" max="250000" step="1" inputmode="numeric" placeholder="Enter whole KES amount" required>
+                  </div>
+                  <div class="member-payment-field">
+                    <label for="member-payment-phone">M-Pesa phone number</label>
+                    <input id="member-payment-phone" name="phone_number" type="tel" autocomplete="tel" placeholder="0712 345 678" required>
+                  </div>
+                  <div class="member-payment-field">
+                    <label for="member-payment-method">How will you pay?</label>
+                    <select id="member-payment-method" name="payment_method" required>
+                      <option value="stk_push">Send an STK prompt</option>
+                      <option value="manual">I already paid by M-Pesa</option>
+                    </select>
+                  </div>
+                  <div class="member-payment-field" data-payment-reference-field hidden>
+                    <label for="member-payment-reference">M-Pesa transaction code</label>
+                    <input id="member-payment-reference" name="manual_reference" type="text" minlength="8" maxlength="20" pattern="[A-Za-z0-9]{8,20}" autocomplete="off" placeholder="e.g. QWE123ABC4">
+                  </div>
+                </div>
+                <p class="member-payment-helper" data-member-payment-helper>We will send an M-Pesa prompt to your phone. Confirm the type and amount before entering your PIN.</p>
+                <button class="portal-submit member-payment-submit" type="submit">Send STK prompt <span aria-hidden="true">→</span></button>
+                <p class="member-payment-message" data-member-payment-message role="status" aria-live="polite"></p>
+              </form>
+              <div class="member-payment-history">
+                <div class="dashboard-section-heading">
+                  <div>
+                    <h4>Recent M-Pesa payments</h4>
+                    <p class="member-history-hint">Track submitted payments and their verification status.</p>
+                  </div>
+                  <button type="button" class="dashboard-text-button" data-refresh-member-payments>Refresh status</button>
+                </div>
+                <ul class="dashboard-list" data-dashboard-list="mpesa-payments"></ul>
+              </div>
+            </section>
+            <section class="withdrawal-request-card dashboard-card" aria-labelledby="withdrawal-request-title">
+              <div class="dashboard-section-heading">
+                <div>
+                  <p class="dashboard-kicker">Savings access</p>
+                  <h3 id="withdrawal-request-title">Request a withdrawal</h3>
+                </div>
+                <span class="withdrawal-balance-badge" data-withdrawal-balance>Available balance: —</span>
+              </div>
+              <p class="withdrawal-request-intro" data-withdrawal-request-guidance>Submit your amount and reason for administrator review. Only one request can be pending at a time. Approval records the withdrawal in your savings ledger; payout is arranged separately by the group.</p>
+              <form class="withdrawal-request-form" id="withdrawal-request-form">
+                <div class="withdrawal-request-fields">
+                  <div>
+                    <label for="withdrawal-request-amount">Amount (KES)</label>
+                    <input id="withdrawal-request-amount" name="amount" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="Enter amount" required>
+                  </div>
+                  <div>
+                    <label for="withdrawal-request-reason">Reason for withdrawal</label>
+                    <textarea id="withdrawal-request-reason" name="reason" minlength="2" maxlength="500" rows="3" placeholder="Briefly explain your request" required></textarea>
+                  </div>
+                </div>
+                <button class="portal-submit withdrawal-request-submit" type="submit">Submit withdrawal request <span aria-hidden="true">→</span></button>
+                <p class="withdrawal-request-message" data-withdrawal-request-message role="status" aria-live="polite"></p>
+              </form>
+              <div class="withdrawal-request-history">
+                <h4>My withdrawal requests</h4>
+                <ul class="dashboard-list" data-dashboard-list="withdrawal-requests"></ul>
+              </div>
+            </section>
+            <section class="statement-tools dashboard-card" aria-labelledby="statement-title">
+              <h3 id="statement-title">Download a member statement</h3>
+              <p>Export your recorded savings, loans, repayments, and due schedule as a CSV file.</p>
+              <div class="statement-date-range">
+                <label for="statement-from">From</label><input id="statement-from" type="date">
+                <label for="statement-to">To</label><input id="statement-to" type="date">
+                <div class="statement-actions">
+                  <button type="button" class="dashboard-text-button" data-download-statement>Download CSV</button>
+                  <button type="button" class="dashboard-text-button" data-print-statement>Print / save PDF</button>
+                </div>
+              </div>
+            </section>
+            <section class="dashboard-card table-card savings-activity-card" aria-labelledby="savings-activity-title">
+              <div class="dashboard-section-heading">
+                <div>
+                  <p class="dashboard-kicker">Your ledger</p>
+                  <h3 class="dashboard-card-title" id="savings-activity-title">Savings activity</h3>
+                  <p class="savings-activity-intro">Contributions and withdrawals posted to your member account.</p>
+                </div>
+              </div>
+              <ul class="dashboard-list dashboard-transactions" data-dashboard-list="savings"></ul>
+            </section>
+          </section>
+
+          <section class="dashboard-view" data-dashboard-panel="loans" hidden>
+            <div class="dashboard-page-heading"><p class="dashboard-kicker">Borrowing</p><h3>My loans</h3><p>View your recorded loan status, due dates, and repayments.</p></div>
+            <section class="loan-terms" aria-labelledby="loan-terms-title">
+              <div class="loan-terms-heading">
+                <div><p class="dashboard-kicker">Before you apply</p><h3 id="loan-terms-title">Loan eligibility &amp; terms</h3></div>
+                <span class="loan-terms-label">Group policy</span>
+              </div>
+              <div class="loan-terms-grid">
+                <article class="loan-term"><span class="loan-term-number">01</span><div><h4>Membership period</h4><p>Be an active member of the group for at least <strong>3 months</strong>.</p></div></article>
+                <article class="loan-term"><span class="loan-term-number">02</span><div><h4>Loan limit</h4><p>Borrow up to <strong>3 times your current savings balance</strong>, subject to group funds and approval.</p></div></article>
+                <article class="loan-term"><span class="loan-term-number">03</span><div><h4>Meeting attendance</h4><p>Attend at least <strong>75% of group meetings</strong> during your membership.</p></div></article>
+                <article class="loan-term"><span class="loan-term-number">04</span><div><h4>Repayment standing</h4><p>Be up to date on any existing loan before a new loan can be considered. One active loan at a time.</p></div></article>
+                <article class="loan-term"><span class="loan-term-number">05</span><div><h4>Group approval</h4><p>Every request is reviewed and approved under the group’s rules. Meeting the criteria does not guarantee approval.</p></div></article>
+                <article class="loan-term"><span class="loan-term-number">06</span><div><h4>Clear repayment terms</h4><p>Agree to the repayment schedule. Any interest, fees, or late-payment terms must be disclosed in writing before accepting a loan.</p></div></article>
+              </div>
+              <p class="loan-terms-note">These are member-facing guidelines. The group’s current written constitution and loan policy take precedence; confirm the latest terms with the group before borrowing.</p>
+            </section>
+            <div class="dashboard-metrics dashboard-metrics-single">
+              <article class="dashboard-metric"><span>Outstanding balance</span><strong data-metric="my-loans-page">—</strong><small>Active approved loans less repayments</small></article>
+              <article class="dashboard-metric"><span>Active loans</span><strong data-metric="my-loan-count">—</strong><small>Approved or active</small></article>
+            </div>
+            <section class="loan-request-card" aria-labelledby="loan-request-title">
+              <div class="loan-request-heading">
+                <div><p class="dashboard-kicker">Member loan application</p><h3 id="loan-request-title">Request a loan</h3></div>
+                <div class="loan-limit-panel" aria-label="Your loan limits">
+                  <div class="loan-limit-values">
+                    <div class="loan-limit-value">
+                      <span class="loan-limit-label">Admin-set limit</span>
+                      <strong data-loan-limit>Checking…</strong>
+                    </div>
+                    <span class="loan-limit-divider" aria-hidden="true"></span>
+                    <div class="loan-limit-value">
+                      <span class="loan-limit-label">Available to request</span>
+                      <strong data-loan-available>Checking…</strong>
+                    </div>
+                  </div>
+                  <button type="button" class="loan-limit-refresh" data-refresh-loan-limit aria-label="Refresh loan limits">
+                    <span class="loan-limit-refresh-icon" aria-hidden="true">↻</span>
+                    <span>Refresh</span>
+                  </button>
+                </div>
+              </div>
+              <p class="loan-limit-explainer">Your request amount is the lower of your admin-set limit or three times your positive net savings.</p>
+              <p class="loan-eligibility-message" data-loan-eligibility role="status" aria-live="polite">Checking your eligibility…</p>
+              <p class="loan-request-result" data-loan-request-result role="status" aria-live="polite"></p>
+              <form class="loan-request-form" id="loan-request-form">
+                <label for="loan-request-amount">Amount requested</label>
+                <div class="loan-amount-field">
+                  <span data-loan-currency>KES</span>
+                  <input id="loan-request-amount" name="amount" type="number" min="1" step="1" inputmode="decimal" placeholder="Enter amount" required disabled>
+                </div>
+                <label for="loan-request-purpose">Purpose of loan</label>
+                <textarea id="loan-request-purpose" name="purpose" rows="3" maxlength="500" placeholder="Tell the group what the loan will be used for" required disabled></textarea>
+                <button class="portal-submit loan-request-submit" type="submit" disabled>Submit loan request <span aria-hidden="true">→</span></button>
+                <small class="loan-request-max-hint" data-loan-max-hint></small>
+                <small class="loan-request-disclaimer">Your request is subject to group review. Submitting does not guarantee approval. Any fees, interest, and repayment schedule will be confirmed in writing before disbursement.</small>
+              </form>
+            </section>
+            <section class="guarantor-panel" data-guarantor-panel hidden aria-labelledby="guarantor-title">
+              <div class="dashboard-page-heading">
+                <p class="dashboard-kicker">Required next step</p>
+                <h3 id="guarantor-title">Choose two group guarantors</h3>
+                <p>Both members must accept before your request can be sent to the group administrator. Being selected is not acceptance; your nominees must review and agree themselves.</p>
+              </div>
+              <form class="guarantor-form" id="guarantor-form">
+                <label for="guarantor-one">First guarantor</label>
+                <select id="guarantor-one" name="guarantor_one" required></select>
+                <label for="guarantor-two">Second guarantor</label>
+                <select id="guarantor-two" name="guarantor_two" required></select>
+                <p class="guarantor-message" data-guarantor-message role="status" aria-live="polite"></p>
+                <button class="portal-submit guarantor-submit" type="submit">Send guarantor requests <span aria-hidden="true">→</span></button>
+              </form>
+            </section>
+            <div class="dashboard-card table-card">
+              <h3 class="dashboard-card-title">My loan requests</h3>
+              <div class="dashboard-transactions" data-dashboard-list="loan-requests"></div>
+            </div>
+            <div class="dashboard-card table-card">
+              <h3 class="dashboard-card-title">Repayment schedule</h3>
+              <p>Installments show the schedule set when the loan was approved. Confirm terms with the group before making payments.</p>
+              <div class="dashboard-transactions" data-dashboard-list="repayment-schedule"></div>
+            </div>
+            <div class="dashboard-card table-card">
+              <h3 class="dashboard-card-title">Payment history</h3>
+              <div class="dashboard-transactions" data-dashboard-list="repayment-history"></div>
+            </div>
+            <div class="dashboard-card table-card guarantor-inbox">
+              <h3 class="dashboard-card-title">Guarantor requests for me</h3>
+              <p class="guarantor-consent-note">Accept only if you understand and agree to the guarantor responsibilities under your group’s rules.</p>
+              <div class="dashboard-transactions" data-dashboard-list="incoming-guarantees"></div>
+            </div>
+            <div class="dashboard-card table-card"><h3 class="dashboard-card-title">Loan records</h3><div class="dashboard-transactions" data-dashboard-list="loans"></div></div>
+          </section>
+
+          <section class="dashboard-view" data-dashboard-panel="updates" hidden>
+            <div class="dashboard-page-heading"><p class="dashboard-kicker">Stay informed</p><h3>Group updates</h3><p>Announcements and meeting reminders shared with members.</p></div>
+            <div class="dashboard-updates" data-dashboard-list="updates"></div>
+          </section>
+        </div>
+        <section class="notification-center dashboard-card" aria-labelledby="notification-center-title">
+          <div class="dashboard-section-heading">
+            <div><p class="dashboard-kicker">Your account</p><h3 id="notification-center-title">Notifications</h3></div>
+            <span class="notification-count" data-notification-count>0 unread</span>
+          </div>
+          <ul class="dashboard-list notification-list" data-dashboard-list="notifications" tabindex="0" aria-label="Recent notifications"></ul>
+        </section>
+        <p class="portal-message" role="status" aria-live="polite"></p>
+        <p class="portal-notice">New accounts require approval by the Vyro group before portal access is enabled.</p>
+      </div>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: vyro-email-service
+    runtime: node
+    buildCommand: npm ci --omit=dev
+    startCommand: npm run start:email
+    healthCheckPath: /healthz
+    envVars:
+      - key: SUPABASE_URL
+        value: https://wleonhczrqupiwxyrdue.supabase.co
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: EMAIL_WEBHOOK_SECRET
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: SITE_URL
+        sync: false
+      - key: ADMIN_NOTIFICATION_EMAIL
+        value: admin@vyrosocial.com

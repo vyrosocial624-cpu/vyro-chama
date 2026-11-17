@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7fc">
+    <title>Admin dashboard | Vyro Self Help Group</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/admin/admin.css">
+    <script type="module" src="/admin/admin.js"></script>
+  </head>
+  <body class="admin-page">
+    <header class="admin-topbar">
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="/assets/vyro-chama-logo.png" alt="Vyro Chama — Save Together. Achieve More." width="662" height="320">
+      </a>
+      <a class="admin-home-link" href="../index.html">Back to public site</a>
+    </header>
+    <main class="admin-main">
+      <section class="admin-login-card" data-admin-login>
+        <p class="eyebrow">Restricted access</p>
+        <h1>Administrator sign in</h1>
+        <p>Use your administrator account. Member portal sign-in is separate.</p>
+        <form class="admin-form" id="admin-login-form">
+          <label for="admin-email">Email address</label>
+          <input id="admin-email" name="email" type="email" autocomplete="username" required>
+          <label for="admin-password">Password</label>
+          <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+          <button class="portal-submit" type="submit">Sign in</button>
+        </form>
+        <p class="admin-status" data-admin-status role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="admin-workspace" data-admin-workspace hidden>
+        <header class="admin-workspace-header">
+          <div>
+            <p class="eyebrow">Administrator dashboard</p>
+            <h1>Group administration</h1>
+            <p>Changes are handled by administrator-only database functions.</p>
+          </div>
+          <div class="admin-session">
+            <span data-admin-identity></span>
+            <button type="button" class="portal-signout" data-admin-signout>Sign out</button>
+          </div>
+        </header>
+        <p class="admin-status" data-admin-dashboard-status role="status" aria-live="polite"></p>
+        <nav class="admin-page-nav" aria-label="Administrator sections">
+          <a href="#admin-overview" data-admin-page-link="admin-overview" aria-current="page">Overview</a>
+          <a href="#admin-finances" data-admin-page-link="admin-finances">Savings &amp; limits</a>
+          <a href="#admin-loans" data-admin-page-link="admin-loans">Loans</a>
+          <a href="#admin-group" data-admin-page-link="admin-group">Meetings &amp; updates</a>
+          <a href="#admin-activity" data-admin-page-link="admin-activity">Activity log</a>
+        </nav>
+        <div class="admin-page-panel" id="admin-overview" data-admin-page-panel>
+        <section class="dashboard-card admin-section">
+          <h2>Member access requests</h2>
+          <div class="admin-list" data-admin-list="pending-members"></div>
+        </section>
+        <section class="dashboard-card admin-section member-directory">
+          <div class="admin-section-heading">
+            <div>
+              <p class="dashboard-kicker">Member records</p>
+              <h2>Member overview</h2>
+            </div>
+            <span class="member-directory-note">Six equal checks: 3 months active, 75% attendance, savings, loan limit, no active loan, and no pending request. Final eligibility follows group rules. Scroll the table horizontally to see every column.</span>
+          </div>
+          <div class="member-directory-scroll">
+            <table class="member-directory-table">
+              <caption class="visually-hidden">Member savings, loan limit, repayment arrears, attendance, and loan qualification</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Member</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Savings</th>
+                  <th scope="col">Loan limit</th>
+                  <th scope="col">Outstanding</th>
+                  <th scope="col">Overdue arrears</th>
+                  <th scope="col">Attendance</th>
+                  <th scope="col">Loan qualification</th>
+                  <th scope="col">Account</th>
+                </tr>
+              </thead>
+              <tbody data-admin-list="members-table"></tbody>
+            </table>
+          </div>
+        </section>
+        </div>
+        <div class="admin-page-panel" id="admin-finances" data-admin-page-panel hidden>
+        <div class="admin-grid">
+          <section class="dashboard-card admin-section admin-form-card">
+            <header class="admin-form-card-heading">
+              <span class="admin-card-number">01</span>
+              <div><p class="dashboard-kicker">Member settings</p><h2>Set member loan limit</h2></div>
+            </header>
+            <form id="admin-limit-form" class="admin-form admin-form-grid">
+              <div class="admin-field admin-field-full"><label for="admin-limit-member">Approved member</label><select id="admin-limit-member" name="member_id" required></select></div>
+              <div class="admin-field admin-field-full"><label for="admin-limit-amount">Maximum loan limit</label><input id="admin-limit-amount" name="loan_limit" type="number" min="0" step="0.01" required></div>
+              <button class="portal-submit admin-form-submit" type="submit">Save limit <span aria-hidden="true">→</span></button>
+            </form>
+          </section>
+          <section class="dashboard-card admin-section admin-form-card">
+            <header class="admin-form-card-heading">
+              <span class="admin-card-number">02</span>
+              <div><p class="dashboard-kicker">Member accounts</p><h2>Record savings transaction</h2></div>
+            </header>
+            <form id="admin-savings-form" class="admin-form admin-form-grid">
+              <div class="admin-field"><label for="admin-savings-member">Approved member</label><select id="admin-savings-member" name="member_id" required></select></div>
+              <div class="admin-field"><label for="admin-savings-type">Transaction type</label><select id="admin-savings-type" name="entry_type"><option value="contribution">Contribution</option><option value="withdrawal">Withdrawal</option></select></div>
+              <div class="admin-field"><label for="admin-savings-amount">Amount</label><input id="admin-savings-amount" name="amount" type="number" min="0.01" step="0.01" required></div>
+              <div class="admin-field"><label for="admin-savings-note">Note or reference</label><input id="admin-savings-note" name="description" type="text" maxlength="300"></div>
+              <button class="portal-submit admin-form-submit" type="submit">Record transaction <span aria-hidden="true">→</span></button>
+            </form>
+          </section>
+        </div>
+        <section class="dashboard-card admin-section admin-withdrawal-review">
+          <header class="admin-form-card-heading">
+            <span class="admin-card-number">WR</span>
+            <div><p class="dashboard-kicker">Member requests</p><h2>Savings withdrawals awaiting review</h2></div>
+          </header>
+          <p class="admin-field-hint">Check the member’s available savings before deciding. Approval records a withdrawal in the ledger; arrange the actual payout separately.</p>
+          <div class="admin-list" data-admin-list="withdrawal-requests"></div>
+        </section>
+        <section class="dashboard-card admin-section admin-mpesa-review">
+          <header class="admin-form-card-heading">
+            <span class="admin-card-number">MP</span>
+            <div><p class="dashboard-kicker">Payment reconciliation</p><h2>M-Pesa payments awaiting review</h2></div>
+          </header>
+          <p class="admin-field-hint">Verify manual references and flagged STK payments against the Paybill statement before approving. For an STK payment, enter the receipt code shown on the statement. Approved savings and repayments are posted to separate member ledgers.</p>
+          <div class="admin-list" data-admin-list="mpesa-payments"></div>
+        </section>
+        </div>
+        <div class="admin-page-panel" id="admin-loans" data-admin-page-panel hidden>
+        <div class="admin-grid">
+          <section class="dashboard-card admin-section admin-form-card admin-form-card-wide">
+            <header class="admin-form-card-heading">
+              <span class="admin-card-number">03</span>
+              <div><p class="dashboard-kicker">Applications</p><h2>Review loan request</h2></div>
+            </header>
+            <form id="admin-loan-review-form" class="admin-form admin-form-grid">
+              <div class="admin-field admin-field-full"><label for="admin-review-request">Request awaiting review</label><select id="admin-review-request" name="request_id" required></select></div>
+              <div class="admin-field admin-field-full"><label for="admin-loan-decision">Decision</label><select id="admin-loan-decision" name="approve"><option value="approve">Approve and create schedule</option><option value="reject">Reject</option></select></div>
+              <div class="admin-field"><label for="admin-loan-total">Total repayment amount</label><input id="admin-loan-total" name="total_due" type="number" min="0.01" step="0.01" aria-describedby="loan-total-hint"></div>
+              <div class="admin-field"><label for="admin-loan-term">Repayment term in months</label><input id="admin-loan-term" name="term_months" type="number" min="1" max="36" value="3"></div>
+              <div class="admin-field"><label for="admin-loan-first-due">First installment due date</label><input id="admin-loan-first-due" name="first_due_date" type="date"></div>
+              <div class="admin-field"><label for="admin-loan-note">Decision note</label><input id="admin-loan-note" name="admin_note" type="text" maxlength="500"></div>
+              <p class="admin-field-hint" id="loan-total-hint">Enter the agreed total including any charges disclosed to the member.</p>
+              <button class="portal-submit admin-form-submit" type="submit">Save loan decision <span aria-hidden="true">→</span></button>
+            </form>
+            <div class="admin-queue">
+              <h3>Requests awaiting action</h3>
+              <div class="admin-list" data-admin-list="requests"></div>
+            </div>
+          </section>
+          <section class="dashboard-card admin-section admin-form-card">
+            <header class="admin-form-card-heading">
+              <span class="admin-card-number">04</span>
+              <div><p class="dashboard-kicker">Loan accounts</p><h2>Record loan repayment</h2></div>
+            </header>
+            <form id="admin-repayment-form" class="admin-form admin-form-grid">
+              <div class="admin-field admin-field-full"><label for="admin-repayment-loan">Active loan</label><select id="admin-repayment-loan" name="loan_id" required></select></div>
+              <div class="admin-field admin-field-full"><label for="admin-repayment-amount">Amount received</label><input id="admin-repayment-amount" name="amount" type="number" min="0.01" step="0.01" required></div>
+              <div class="admin-field admin-field-full"><label for="admin-repayment-note">Note or receipt reference</label><input id="admin-repayment-note" name="note" type="text" maxlength="300"></div>
+              <button class="portal-submit admin-form-submit" type="submit">Record repayment <span aria-hidden="true">→</span></button>
+            </form>
+          </section>
+        </div>
+        </div>
+        <div class="admin-page-panel" id="admin-group" data-admin-page-panel hidden>
+        <div class="admin-grid">
+          <section class="dashboard-card admin-section admin-form-card">
+            <header class="admin-form-card-heading">
+              <span class="admin-card-number">05</span>
+              <div><p class="dashboard-kicker">Group communication</p><h2>Publish group announcement</h2></div>
+            </header>
+            <form id="admin-announcement-form" class="admin-form admin-form-grid">
+              <div class="admin-field admin-field-full"><label for="admin-announcement-title">Title</label><input id="admin-announcement-title" name="title" type="text" maxlength="120" required></div>
+              <div class="admin-field admin-field-full"><label for="admin-announcement-body">Message</label><textarea id="admin-announcement-body" name="body" rows="4" maxlength="2000" required></textarea></div>
+              <button class="portal-submit admin-form-submit" type="submit">Publish announcement <span aria-hidden="true">→</span></button>
+            </form>
+          </section>
+          <section class="dashboard-card admin-section admin-form-card admin-form-card-wide">
+            <header class="admin-form-card-heading">
+              <span class="admin-card-number">06</span>
+              <div><p class="dashboard-kicker">Group schedule</p><h2>Meetings &amp; attendance</h2></div>
+            </header>
+            <form id="admin-meeting-form" class="admin-form admin-form-grid">
+              <div class="admin-field"><label for="admin-meeting-title">Meeting title</label><input id="admin-meeting-title" name="title" type="text" maxlength="120" required></div>
+              <div class="admin-field"><label for="admin-meeting-date">Date and time</label><input id="admin-meeting-date" name="starts_at" type="datetime-local" required></div>
+              <div class="admin-field admin-field-full"><label for="admin-meeting-location">Location</label><input id="admin-meeting-location" name="location" type="text" maxlength="200"></div>
+              <button class="portal-submit admin-form-submit" type="submit">Create meeting <span aria-hidden="true">→</span></button>
+            </form>
+            <form id="admin-attendance-form" class="admin-form admin-form-grid attendance-form">
+              <div class="admin-attendance-heading">
+                <h3>Mark member attendance</h3>
+                <p>Select a meeting, then mark the members who attended.</p>
+              </div>
+              <div class="admin-field admin-field-full"><label for="admin-attendance-meeting">Meeting to record</label><select id="admin-attendance-meeting" name="meeting_id" required></select></div>
+              <div class="attendance-list" data-admin-list="attendance"></div>
+              <button class="portal-submit admin-form-submit" type="submit">Save attendance <span aria-hidden="true">→</span></button>
+            </form>
+            <div class="admin-queue">
+              <h3>Scheduled meetings</h3>
+              <div class="admin-list" data-admin-list="meetings"></div>
+            </div>
+          </section>
+        </div>
+        </div>
+        <div class="admin-page-panel" id="admin-activity" data-admin-page-panel hidden>
+        <section class="dashboard-card admin-section">
+          <h2>Administrator audit log</h2>
+          <p>Recent administrative changes, including approvals, financial entries, meeting attendance, and loan decisions.</p>
+          <div class="admin-list" data-admin-list="audit"></div>
+        </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
