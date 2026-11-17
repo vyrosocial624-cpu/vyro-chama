@@ -130,6 +130,53 @@ async function getLoanRequest(requestId) {
   return data;
 }
 
+async function getMemberSavingsSummary(memberId) {
+  const [loanLimitResult, currencyResult] = await Promise.all([
+    supabase
+      .from("member_loan_settings")
+      .select("loan_limit")
+      .eq("member_id", memberId)
+      .maybeSingle(),
+    supabase
+      .from("group_settings")
+      .select("currency")
+      .eq("id", true)
+      .maybeSingle(),
+  ]);
+  if (loanLimitResult.error) {
+    throw new Error(`Unable to load member loan limit: ${loanLimitResult.error.message}`);
+  }
+  if (currencyResult.error) {
+    throw new Error(`Unable to load group currency: ${currencyResult.error.message}`);
+  }
+
+  let savingsBalance = 0;
+  const pageSize = 1000;
+  for (let offset = 0; ; offset += pageSize) {
+    const { data, error } = await supabase
+      .from("savings_transactions")
+      .select("amount, entry_type")
+      .eq("member_id", memberId)
+      .order("id", { ascending: true })
+      .range(offset, offset + pageSize - 1);
+    if (error) {
+      throw new Error(`Unable to load member savings balance: ${error.message}`);
+    }
+
+    for (const transaction of data || []) {
+      const amount = Number(transaction.amount);
+      savingsBalance += transaction.entry_type === "contribution" ? amount : -amount;
+    }
+    if (!data || data.length < pageSize) break;
+  }
+
+  return {
+    savingsBalance,
+    loanLimit: loanLimitResult.data?.loan_limit ?? null,
+    currency: currencyResult.data?.currency || "KES",
+  };
+}
+
 function eventIdentity(event, suffix) {
   const row = event.record || {};
   return [
@@ -397,12 +444,22 @@ async function handleWebhook(event) {
     case "savings_transactions": {
       const { record } = event;
       const withdrawal = record.entry_type === "withdrawal";
+      const summary = await getMemberSavingsSummary(record.member_id);
+      const formatAmount = (amount) => new Intl.NumberFormat("en-KE", {
+        style: "currency",
+        currency: summary.currency,
+        maximumFractionDigits: 2,
+      }).format(Number(amount) || 0);
       await sendToMember(record.member_id, {
         identity: eventIdentity(event, "savings"),
         subject: withdrawal ? "Savings withdrawal recorded" : "Savings contribution recorded",
         paragraphs: [
-          `${withdrawal ? "A withdrawal" : "A savings contribution"} of KES ${Number(record.amount).toLocaleString("en-KE")} was recorded.`,
-          record.description || "Sign in to review your updated savings balance.",
+          `${withdrawal ? "A withdrawal" : "A savings contribution"} of ${formatAmount(record.amount)} was recorded.`,
+          `Your current savings balance is ${formatAmount(summary.savingsBalance)}.`,
+          `Your administrator-set loan limit is ${summary.loanLimit === null
+            ? "not set"
+            : formatAmount(summary.loanLimit)}.`,
+          record.description || "Sign in to review your updated account details.",
         ],
       });
       break;
